@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://5d11lku3dxah"]
+
+[ext_resource type="Script" path="res://Scenes/Prefabs/Player/player.gd" id="1_3xvex"]
+[ext_resource type="Texture2D" uid="uid://cviytcybahhcr" path="res://icon.svg" id="2_1aqwa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtw46"]
+size = Vector2(64, 64)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_3xvex")
+jump_height = -500.0
+terminal_velocity = 1000.0
+metadata/SpawnPosition = Vector2(0, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.99, 0.99)
+shape = SubResource("RectangleShape2D_vtw46")
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1aqwa")

@@ -1,0 +1,383 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkp3drav2fj3y"]
+
+[ext_resource type="PackedScene" uid="uid://5d11lku3dxah" path="res://Scenes/Prefabs/Player/Player.tscn" id="1_ky21c"]
+[ext_resource type="Texture2D" uid="uid://c4lvdkg58rqbo" path="res://Assets/background.png" id="1_sdu5k"]
+[ext_resource type="PackedScene" uid="uid://t1c3ou5f4kvn" path="res://Scenes/Prefabs/Map/base_tile.tscn" id="2_vwe72"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -6
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_sdu5k")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="BaseTile" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-32, 160)
+
+[node name="BaseTile2" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(32, 160)
+
+[node name="BaseTile84" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(32, 96)
+
+[node name="BaseTile85" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(32, -160)
+
+[node name="BaseTile3" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(96, 160)
+
+[node name="BaseTile4" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-96, 160)
+
+[node name="BaseTile5" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-160, 96)
+
+[node name="BaseTile6" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-160, 160)
+
+[node name="BaseTile7" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-480, 32)
+
+[node name="BaseTile15" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-480, -32)
+
+[node name="BaseTile18" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-544, -96)
+
+[node name="BaseTile19" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-608, -160)
+
+[node name="BaseTile16" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, -224)
+
+[node name="BaseTile8" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, 32)
+
+[node name="BaseTile9" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-608, 32)
+
+[node name="BaseTile10" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-672, 32)
+
+[node name="BaseTile22" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-736, -32)
+
+[node name="BaseTile23" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-736, 32)
+
+[node name="BaseTile24" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-800, 32)
+
+[node name="BaseTile25" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-864, 32)
+
+[node name="BaseTile47" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-928, 32)
+
+[node name="BaseTile48" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-992, 32)
+
+[node name="BaseTile49" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-992, 352)
+
+[node name="BaseTile50" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-928, 352)
+
+[node name="BaseTile51" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-864, 352)
+
+[node name="BaseTile52" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-800, 352)
+
+[node name="BaseTile53" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-736, 352)
+
+[node name="BaseTile54" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-672, 352)
+
+[node name="BaseTile55" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-608, 352)
+
+[node name="BaseTile26" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, 160)
+
+[node name="BaseTile37" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, 160)
+
+[node name="BaseTile36" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, 96)
+
+[node name="BaseTile27" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, 224)
+
+[node name="BaseTile28" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, 288)
+
+[node name="BaseTile29" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-416, 352)
+
+[node name="BaseTile30" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-352, 352)
+
+[node name="BaseTile31" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-288, 352)
+
+[node name="BaseTile32" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-224, 352)
+
+[node name="BaseTile33" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-160, 352)
+
+[node name="BaseTile34" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-160, 288)
+
+[node name="BaseTile35" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-160, 224)
+
+[node name="BaseTile11" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-544, 32)
+
+[node name="BaseTile12" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-416, -32)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile38" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-352, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile39" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-288, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile40" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-224, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile41" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-224, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile42" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-288, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile43" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-352, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile44" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-352, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile56" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-992, 96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile57" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-992, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile58" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-928, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile59" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-928, 96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile60" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-992, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile61" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-992, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile62" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-928, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile63" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-928, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile64" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-864, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile65" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-864, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile66" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-800, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile67" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-800, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile68" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-864, 96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile69" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-864, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile70" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-800, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile71" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-800, 96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile72" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-736, 96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile73" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-736, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile74" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-672, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile75" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-672, 96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile76" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-736, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile86" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(32, -96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile87" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(32, -32)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile88" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(32, 32)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile77" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-736, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile78" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-672, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile83" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-608, 288)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile79" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-672, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile80" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-608, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile81" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-608, 96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile82" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-608, 224)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile45" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-288, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile46" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-224, 160)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile13" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-416, -96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile17" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-544, -32)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile20" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-608, -32)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile21" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-608, -96)
+metadata/CollisionEnabled = false
+
+[node name="BaseTile14" parent="." instance=ExtResource("2_vwe72")]
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(-416, -160)
+metadata/CollisionEnabled = false
+
+[node name="Player" parent="." instance=ExtResource("1_ky21c")]
+position = Vector2(32, 0)
+metadata/SpawnPosition = Vector2(32, 0)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_speed = 30.0

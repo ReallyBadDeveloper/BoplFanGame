@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://t1c3ou5f4kvn"]
+
+[ext_resource type="Texture2D" uid="uid://d4kxptri5naxx" path="res://Assets/tile.png" id="1_wfr2w"]
+[ext_resource type="Script" path="res://Scenes/Prefabs/Map/Tile.gd" id="2_o8gc2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b67e"]
+size = Vector2(24, 24)
+
+[node name="BaseTile" type="Sprite2D"]
+scale = Vector2(2.66667, 2.66667)
+texture = ExtResource("1_wfr2w")
+region_rect = Rect2(0, 0, 32, 34)
+script = ExtResource("2_o8gc2")
+metadata/CollisionEnabled = true
+metadata/Harmful = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.90735e-06, 5.68434e-14)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_4b67e")
+debug_color = Color(0.617859, 0.529228, 0.232787, 0.42)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="HarmfulShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("RectangleShape2D_4b67e")
+debug_color = Color(0.885037, 0.304971, 0.350905, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_collide_with_oofy_boi"]
