@@ -9,13 +9,25 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if get_meta("CollisionEnabled") == false:
 		$StaticBody2D/CollisionShape2D.disabled = true
+		$UpGravity/CollisionShape2D.disabled = true
+		$DownGravity/CollisionShape2D.disabled = true
+		$LeftGravity/CollisionShape2D.disabled = true
+		$RightGravity/CollisionShape2D.disabled = true
 	if get_meta("CollisionEnabled") == true:
 		$StaticBody2D/CollisionShape2D.disabled = false
+		$UpGravity/CollisionShape2D.disabled = false
+		$DownGravity/CollisionShape2D.disabled = false
+		$LeftGravity/CollisionShape2D.disabled = false
+		$RightGravity/CollisionShape2D.disabled = false
 	if get_meta("Harmful") == false:
 		$Area2D/HarmfulShape2D.disabled = true
 	if get_meta("Harmful") == true:
 		$Area2D/HarmfulShape2D.disabled = false
 		$StaticBody2D/CollisionShape2D.disabled = true
+		$UpGravity/CollisionShape2D.disabled = true
+		$DownGravity/CollisionShape2D.disabled = true
+		$LeftGravity/CollisionShape2D.disabled = true
+		$RightGravity/CollisionShape2D.disabled = true
 	pass
 	
 
