@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://t1c3ou5f4kvn"]
+[gd_scene load_steps=5 format=3 uid="uid://t1c3ou5f4kvn"]
 
 [ext_resource type="Texture2D" uid="uid://d4kxptri5naxx" path="res://Assets/tile.png" id="1_wfr2w"]
 [ext_resource type="Script" path="res://Scenes/Prefabs/Map/Tile.gd" id="2_o8gc2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4b67e"]
-size = Vector2(24, 24)
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_on2an"]
+size = Vector2(32, 12)
 
 [node name="BaseTile" type="Sprite2D"]
-scale = Vector2(2.66667, 2.66667)
+scale = Vector2(2, 2)
 texture = ExtResource("1_wfr2w")
 region_rect = Rect2(0, 0, 32, 34)
 script = ExtResource("2_o8gc2")
@@ -17,8 +20,6 @@ metadata/Harmful = false
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1.90735e-06, 5.68434e-14)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_4b67e")
 debug_color = Color(0.617859, 0.529228, 0.232787, 0.42)
 
@@ -28,5 +29,35 @@ debug_color = Color(0.617859, 0.529228, 0.232787, 0.42)
 visible = false
 shape = SubResource("RectangleShape2D_4b67e")
 debug_color = Color(0.885037, 0.304971, 0.350905, 0.42)
+
+[node name="DownGravity" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DownGravity"]
+position = Vector2(-4.76837e-07, 18)
+shape = SubResource("RectangleShape2D_on2an")
+debug_color = Color(0.65098, 0.364706, 0.933333, 0.419608)
+
+[node name="UpGravity" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UpGravity"]
+position = Vector2(0, -18)
+shape = SubResource("RectangleShape2D_on2an")
+debug_color = Color(0.65098, 0.364706, 0.933333, 0.419608)
+
+[node name="LeftGravity" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftGravity"]
+position = Vector2(-18, 0)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_on2an")
+debug_color = Color(0.65098, 0.364706, 0.933333, 0.419608)
+
+[node name="RightGravity" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightGravity"]
+position = Vector2(18, -8.74229e-08)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_on2an")
+debug_color = Color(0.65075, 0.364102, 0.933187, 0.42)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_collide_with_oofy_boi"]

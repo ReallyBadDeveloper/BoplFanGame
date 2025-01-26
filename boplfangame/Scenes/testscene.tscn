@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkp3drav2fj3y"]
+[gd_scene load_steps=5 format=3 uid="uid://bkp3drav2fj3y"]
 
 [ext_resource type="PackedScene" uid="uid://5d11lku3dxah" path="res://Scenes/Prefabs/Player/Player.tscn" id="1_ky21c"]
-[ext_resource type="Texture2D" uid="uid://c4lvdkg58rqbo" path="res://Assets/background.png" id="1_sdu5k"]
+[ext_resource type="Texture2D" uid="uid://dfddrnqbblhyo" path="res://Assets/boplbackground.png" id="1_qrsoe"]
 [ext_resource type="PackedScene" uid="uid://t1c3ou5f4kvn" path="res://Scenes/Prefabs/Map/base_tile.tscn" id="2_vwe72"]
+[ext_resource type="Texture2D" uid="uid://bdg8t5ip26kae" path="res://Assets/spike.png" id="3_078dk"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_sdu5k")
+texture = ExtResource("1_qrsoe")
 expand_mode = 1
 stretch_mode = 6
 
@@ -164,6 +165,21 @@ metadata/CollisionEnabled = false
 modulate = Color(0.5, 0.5, 0.5, 1)
 position = Vector2(-224, 288)
 metadata/CollisionEnabled = false
+
+[node name="BaseTile89" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-352, 288)
+texture = ExtResource("3_078dk")
+metadata/Harmful = true
+
+[node name="BaseTile90" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-288, 288)
+texture = ExtResource("3_078dk")
+metadata/Harmful = true
+
+[node name="BaseTile91" parent="." instance=ExtResource("2_vwe72")]
+position = Vector2(-224, 288)
+texture = ExtResource("3_078dk")
+metadata/Harmful = true
 
 [node name="BaseTile41" parent="." instance=ExtResource("2_vwe72")]
 modulate = Color(0.5, 0.5, 0.5, 1)
