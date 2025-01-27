@@ -31,6 +31,7 @@ shape = SubResource("RectangleShape2D_4b67e")
 debug_color = Color(0.885037, 0.304971, 0.350905, 0.42)
 
 [node name="DownGravity" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DownGravity"]
 position = Vector2(-4.76837e-07, 18)
@@ -38,6 +39,7 @@ shape = SubResource("RectangleShape2D_on2an")
 debug_color = Color(0.65098, 0.364706, 0.933333, 0.419608)
 
 [node name="UpGravity" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="UpGravity"]
 position = Vector2(0, -18)
@@ -45,6 +47,7 @@ shape = SubResource("RectangleShape2D_on2an")
 debug_color = Color(0.65098, 0.364706, 0.933333, 0.419608)
 
 [node name="LeftGravity" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftGravity"]
 position = Vector2(-18, 0)
@@ -53,6 +56,7 @@ shape = SubResource("RectangleShape2D_on2an")
 debug_color = Color(0.65098, 0.364706, 0.933333, 0.419608)
 
 [node name="RightGravity" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightGravity"]
 position = Vector2(18, -8.74229e-08)

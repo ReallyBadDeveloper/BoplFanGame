@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://cb68whuip3syx"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/dialoguebox.gd" id="1_tqmdc"]
+[ext_resource type="Texture2D" uid="uid://bguh0h27pk6lp" path="res://Assets/dialoguebox.png" id="2_5ng4e"]
+[ext_resource type="Texture2D" uid="uid://cfeif1k4xnj8n" path="res://Assets/playerversion.png" id="3_5i1bv"]
+[ext_resource type="FontFile" uid="uid://csxqtdjtr1tmv" path="res://Assets/PixelAdventure.ttf" id="4_duk0p"]
+
+[sub_resource type="Theme" id="Theme_8di8s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5xyd"]
+content_margin_left = 128.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_uovo7"]
+default_font = ExtResource("4_duk0p")
+Label/styles/normal = SubResource("StyleBoxFlat_c5xyd")
+
+[sub_resource type="LabelSettings" id="LabelSettings_w4rmc"]
+font = ExtResource("4_duk0p")
+font_size = 32
+
+[node name="DialogueBox" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tqmdc")
+metadata/Text = ""
+
+[node name="MainBox" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_8di8s")
+texture = ExtResource("2_5ng4e")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 1
+
+[node name="TextureRect" type="TextureRect" parent="MainBox"]
+layout_mode = 1
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 96.0
+offset_bottom = 96.0
+texture = ExtResource("3_5i1bv")
+
+[node name="DialogueText" type="Label" parent="MainBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_uovo7")
+text = "you know what else is massive?"
+label_settings = SubResource("LabelSettings_w4rmc")

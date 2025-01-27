@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://boukvd54fxop0"]
+
+[ext_resource type="Texture2D" uid="uid://cericate5b378" path="res://Assets/sin.png" id="1_lla6j"]
+[ext_resource type="Script" path="res://npc.gd" id="2_55cun"]
+[ext_resource type="PackedScene" uid="uid://cb68whuip3syx" path="res://Scenes/Menus/dialoguebox.tscn" id="3_c1w5v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhbrj"]
+size = Vector2(32, 32)
+
+[node name="NPC" type="Sprite2D"]
+process_mode = 3
+scale = Vector2(2, 2)
+texture = ExtResource("1_lla6j")
+script = ExtResource("2_55cun")
+
+[node name="InteractZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractZone"]
+shape = SubResource("RectangleShape2D_dhbrj")
+debug_color = Color(0.137592, 0.64615, 0, 0.42)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("3_c1w5v")]
+process_mode = 3
+visible = false
+
+[connection signal="body_entered" from="InteractZone" to="." method="_on_interact_zone_body_entered"]
+[connection signal="body_exited" from="InteractZone" to="." method="_on_interact_zone_body_exited"]
